@@ -1,0 +1,11 @@
+mlflow
+psycopg2-binary
+jupyter
+scikit-learn
+pandas
+numpy
+seaborn
+hyperopt
+xgboost
+pyarrow
+fastparquet
