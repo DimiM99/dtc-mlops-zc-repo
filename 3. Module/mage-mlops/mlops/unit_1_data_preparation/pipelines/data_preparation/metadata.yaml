@@ -5,7 +5,6 @@ blocks:
     file_source:
       path: unit_1_data_preparation/data_loaders/ingest.py
   downstream_blocks:
-  - ingest_time_series_bar_chart_k8
   - prepare
   executor_config: null
   executor_type: local_python
@@ -59,22 +58,4 @@ tags: []
 type: python
 uuid: data_preparation
 variables_dir: /home/src/mage_data/unit_1_data_preparation
-widgets:
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    chart_type: time series bar chart
-    time_interval: original
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: ingest_time series bar chart_k8
-  retry_config: null
-  status: executed
-  timeout: null
-  type: chart
-  upstream_blocks:
-  - ingest
-  uuid: ingest_time_series_bar_chart_k8
+widgets: []
