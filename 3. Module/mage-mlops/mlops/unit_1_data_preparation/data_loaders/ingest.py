@@ -4,6 +4,7 @@ import requests
 from io import BytesIO
 from typing import List
 import pandas as pd
+import numpy as np
 
 @data_loader
 def ingest_files(**kwargs) -> pd.DataFrame:
@@ -20,5 +21,6 @@ def ingest_files(**kwargs) -> pd.DataFrame:
                 raise Exception(response.text)
 
             df = pd.read_parquet(BytesIO(response.content))
+            df['lpep_pickup_datetime_cleaned'] = df['lpep_pickup_datetime'].astype(np.int64) // 10**9
             dfs. append (df)
     return pd.concat(dfs)
